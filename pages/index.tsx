@@ -44,13 +44,34 @@ export default function Home() {
     fetchData() 
   }, [input]);
 
+  function handleBackgroundColour() {
+    let colour: string = '';
+    if (airQuality.category) {
+      switch(airQuality.category) {
+        case 'Unhealthy':
+        case 'Poor':
+          colour = '#FF4343';
+          break;
+        case 'Moderate':
+            colour = 'orange';
+            break;
+        case 'Good':
+          colour = '#84D75D';
+          break;
+        default:
+          colour = 'pink';
+      }
+    }
+    return colour;
+  }
+
   return (
     <>
       <Flex
       flexDirection='column'
       >
         <Flex
-          bg='#FF4343'
+          bg={airQuality ? handleBackgroundColour : 'pink'}
           px='1em'
           py='1em'
               alignItems='center'

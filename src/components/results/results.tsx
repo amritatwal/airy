@@ -2,37 +2,48 @@ import React from 'react';
 import { Box, Text, Flex} from '@chakra-ui/react';
 
 function Results({ airQuality }) {
-    
-
 
     return (
         <>
             <Flex
+                color='white'
+                alignItems='center'
                 flexDirection='column'
-                my='2em'
+                my='1.5em'
             >
+                <Box
+                                    mb='1em'
+                    display='flex'
+                    flexDirection='row'
+                >
+                    <Text
+                                            fontSize='1em'
+                        textTransform='uppercase'
+                        letterSpacing='1.5px'
+                    fontWeight='800'
+                    >{airQuality.name}, {airQuality.country}</Text>
+                </Box>
 
 <Box
                 display='flex'
                 justifyContent='center'
                 alignItems='center'
-                color='white'
                 borderRadius='50%'
                 border={'solid 3px white'}
-                w={{ base: '10em' }}
-                h={{ base: '10em' }}
+                w={{ base: '8.5em' }}
+                    h={{ base: '8.5em' }}
+                    mb='1.5em'
             >
                 <Text
                     fontSize={{ base: '4em'}}
-                >{Math.round(airQuality.concentration)}</Text>
+                    >{Math.round(airQuality.concentration)}</Text>
                 </Box>
-                <Box
-                                    mt='2em'
-                    display='flex'
-                    flexDirection='row'
-                >
-                <Text>{airQuality.name}, {airQuality.country}</Text>
-                </Box>
+                <Text
+                     textTransform='uppercase'
+                     letterSpacing='1.5px'
+                 fontWeight='800'
+                    fontSize={{ base: '1.5em'}}
+                >{airQuality.category}</Text>
             </Flex>
         
         </>
