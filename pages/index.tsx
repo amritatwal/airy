@@ -3,10 +3,17 @@ import Results from '../src/components/results/results';
 import SearchBar from '../src/components/searchBar/searchBar';
 import API_KEY from '../config';
 
+// Set the shape of Location
+type Location = {
+  name: string, 
+  country: string, 
+  concentration: number,
+  category: string
+};
+
 export default function Home() {
   const [input, setInput] = useState<string>();
-  const [postcode, setPostcode] = useState<string>();
-  const [country, setCountry] = useState<string>();
+  const [airQuality, setAirQuality] = useState<Location>();
 
   function handleChange(event: React.KeyboardEvent<HTMLInputElement>) {
     if (event.key === "Enter") {
@@ -25,13 +32,22 @@ export default function Home() {
         }
       });
       const data = await res.json()
-      console.log(data.stations[0])
+      const result = {
+        name: data.stations[0].placeName, 
+        country: data.stations[0].countryCode, 
+        concentration: data.stations[0].aqiInfo.concentration,
+        category: data.stations[0].aqiInfo.category
+      }
+      setAirQuality(result)
     }
     fetchData() 
   }, [input]);
 
-
   return (
-    <SearchBar handleChange={handleChange}/>
+    <>
+      <SearchBar handleChange={handleChange} />
+      {airQuality ? <Results airQuality={airQuality} /> : <></>}
+    </>
+    
   )
 }

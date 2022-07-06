@@ -1,9 +1,15 @@
-import React from 'react'
+import React from 'react';
 
-function Results (props:any) {
+// Set the shape of Location
+
+function Results ({airQuality}) {
     return (
         <>
-            test
+            <p>{airQuality.name}</p>
+            <p>{airQuality.concentration}</p>
+            <p>{airQuality.country}</p>
+            <p>{airQuality.category}</p>
+
         </>
     )
 }
