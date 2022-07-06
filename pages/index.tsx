@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Results from '../src/components/results/results';
 import SearchBar from '../src/components/searchBar/searchBar';
+import API_KEY from '../config';
 
 export default function Home() {
   const [input, setInput] = useState<string>();
@@ -19,7 +20,7 @@ export default function Home() {
       const res = await fetch(`https://api.ambeedata.com/latest/by-city?city=${input}`, {
         "method": "GET",
         "headers": {
-          "x-api-key": "bea4eac02dcf0f3b8f6c1e7d1e8b261775a89e3f49e76938b60c037fed0bba13",
+          "x-api-key": `${API_KEY}`,
           "Content-type": "application/json"
         }
       });
