@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { Box, Text, Flex} from '@chakra-ui/react';
 
 function Results({ airQuality }) {
@@ -15,7 +16,12 @@ function Results({ airQuality }) {
                                     mb='1em'
                     display='flex'
                     flexDirection='row'
-                >
+                ><Box px='.3em'>
+                        <Image
+                            width={25}
+                            height={25}
+                        src='https://svgshare.com/i/itr.svg' alt='location' />
+                </Box>
                     <Text
                                             fontSize='1em'
                         textTransform='uppercase'
