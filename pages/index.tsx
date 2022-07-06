@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Heading, Flex } from '@chakra-ui/react'
 import Results from '../src/components/results/results';
 import SearchBar from '../src/components/searchBar/searchBar';
+import Feedback from '../src/components/feedback/feedback';
 import API_KEY from '../config';
 
 // Set the shape of Location
@@ -49,6 +50,7 @@ export default function Home() {
     if (airQuality.category) {
       switch(airQuality.category) {
         case 'Unhealthy':
+        case 'Unhealthy for Sensitive Groups':
         case 'Poor':
           colour = '#FF4343';
           break;
@@ -68,14 +70,15 @@ export default function Home() {
   return (
     <>
       <Flex
-      flexDirection='column'
+        flexDirection='column'
+
       >
         <Flex
           bg={airQuality ? handleBackgroundColour : 'pink'}
-          px='1em'
           py='1em'
               alignItems='center'
           flexDirection='column'
+          px={{base: '1em', md:'8em'}}
         >
           <Heading
             color='white'
@@ -86,7 +89,7 @@ export default function Home() {
           <SearchBar handleChange={handleChange} />
           {airQuality ? <Results airQuality={airQuality} /> : <></>}
         </Flex>
-        hello
+    <Feedback/>
     </Flex>
     </>
   )

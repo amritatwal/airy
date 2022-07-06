@@ -3,7 +3,6 @@ import Image from 'next/image';
 import { Box, Text, Flex} from '@chakra-ui/react';
 
 function Results({ airQuality }) {
-
     return (
         <>
             <Flex
@@ -35,7 +34,7 @@ function Results({ airQuality }) {
                 justifyContent='center'
                 alignItems='center'
                 borderRadius='50%'
-                border={'solid 3px white'}
+                border={'solid 4px white'}
                 w={{ base: '8.5em' }}
                     h={{ base: '8.5em' }}
                     mb='1.5em'
