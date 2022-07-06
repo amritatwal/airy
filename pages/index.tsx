@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Heading, Flex } from '@chakra-ui/react'
 import Results from '../src/components/results/results';
 import SearchBar from '../src/components/searchBar/searchBar';
 import API_KEY from '../config';
@@ -45,9 +46,27 @@ export default function Home() {
 
   return (
     <>
-      <SearchBar handleChange={handleChange} />
-      {airQuality ? <Results airQuality={airQuality} /> : <></>}
+      <Flex
+      flexDirection='column'
+      >
+        <Flex
+          bg='#FF4343'
+          px='1em'
+          py='1em'
+              alignItems='center'
+          flexDirection='column'
+        >
+          <Heading
+            color='white'
+            mb='.5em'
+            fontSize='3em'
+            fontFamily='Fredoka One'
+            >airy</Heading>
+          <SearchBar handleChange={handleChange} />
+          {airQuality ? <Results airQuality={airQuality} /> : <></>}
+        </Flex>
+        hello
+    </Flex>
     </>
-    
   )
 }
