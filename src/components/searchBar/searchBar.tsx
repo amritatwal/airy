@@ -7,7 +7,6 @@ function SearchBar({handleChange}) {
             <Input
                 w={{md:'40em'}}
                 variant='outline' placeholder='Search by city...'
-                color='grey'
                 onKeyPress={(event: React.KeyboardEvent<HTMLInputElement>) => handleChange(event)} />  
         </>
     )

@@ -1,30 +1,33 @@
 import React from 'react';
-import { Box, Text, Flex} from '@chakra-ui/react';
+import { Box, Text, Flex } from '@chakra-ui/react';
+import Overview from '../cards/overview/overview';
 
 function Feedback() {
     return (
         <>
             <Flex
-                px={{base: '1em', md:'15em'}}
+                px={{ base: '1em', md: '15em' }}
                 my='1em'
-            flexDirection='column'
+                flexDirection='column'
             >
                 <Flex
                     flexDirection='row'
                 >
                     <Box
                         mr='1em'
-     w='50%'
-     h={{ base: '6.5em', md: '10em' }}
-                    borderRadius='12px'
-                bg='#F9F9F9'
-                >one</Box>
+                        w='50%'
+                        h={{ base: '6.5em', md: '10em' }}
+                        borderRadius='12px'
+                        bg='#F9F9F9'
+                    >
+                        <Overview/>
+                    </Box>
                     <Box
-     w='50%'
- h={{ base: '6.5em', md: '10em' }}
-                    borderRadius='12px'
-                bg='#F9F9F9'
-                >one</Box>
+                        w='50%'
+                        h={{ base: '6.5em', md: '10em' }}
+                        borderRadius='12px'
+                        bg='#F9F9F9'
+                    >one</Box>
                 </Flex>
                 <Flex
                     py='1em'
@@ -33,28 +36,28 @@ function Feedback() {
                 >
                     <Box
 
-                    w={{ base: '6.5em', md: '20em' }}
+                        w={{ base: '6.5em', md: '20em' }}
                         h={{ base: '6.5em', md: '10em' }}
-                                       borderRadius='12px'
-                                       bg='#F9F9F9'
+                        borderRadius='12px'
+                        bg='#F9F9F9'
                     >hello</Box>
                     <Box
 
-w={{ base: '6.5em', md: '20em' }}
+                        w={{ base: '6.5em', md: '20em' }}
                         h={{ base: '6.5em', md: '10em' }}
-                                       borderRadius='12px'
-                                       bg='#F9F9F9'
+                        borderRadius='12px'
+                        bg='#F9F9F9'
                     >two</Box>
                     <Box
-                    w={{ base: '6.5em', md: '20em' }}
+                        w={{ base: '6.5em', md: '20em' }}
                         h={{ base: '6.5em', md: '10em' }}
-                                       borderRadius='12px'
-                                       bg='#F9F9F9'
+                        borderRadius='12px'
+                        bg='#F9F9F9'
                     >three</Box>
                 </Flex>                <Box
-                                        h={{lg: '7em'}}
+                    h={{ lg: '7em' }}
                     borderRadius='12px'
-                bg='#F9F9F9'
+                    bg='#F9F9F9'
                 >four</Box>
             </Flex>
         </>
