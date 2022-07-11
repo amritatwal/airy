@@ -16,3 +16,5 @@ const icons = [
     src: "https://svgur.com/s/iw9",
   },
 ];
+
+export default icons;

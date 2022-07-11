@@ -71,7 +71,6 @@ export default function Home() {
     <>
       <Flex
         flexDirection='column'
-
       >
         <Flex
           bg={airQuality ? handleBackgroundColour : 'pink'}
@@ -87,9 +86,13 @@ export default function Home() {
             fontFamily='Fredoka One'
             >airy</Heading>
           <SearchBar handleChange={handleChange} />
-          {airQuality ? <Results airQuality={airQuality} /> : <></>}
+          {airQuality ? 
+          <>
+              <Results airQuality={airQuality} />
+              <Feedback category={airQuality.category} />
+              </>
+            : <></>}
         </Flex>
-    <Feedback/>
     </Flex>
     </>
   )

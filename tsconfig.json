@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "libs/data/icons.js"  ],
   "exclude": [
     "node_modules"
   ]

@@ -2,7 +2,8 @@ import React from 'react';
 import { Box, Text, Flex } from '@chakra-ui/react';
 import Overview from '../cards/overview/overview';
 
-function Feedback() {
+function Feedback({ category }) {
+    console.log("hello", category)
     return (
         <>
             <Flex
@@ -20,7 +21,7 @@ function Feedback() {
                         borderRadius='12px'
                         bg='#F9F9F9'
                     >
-                        <Overview/>
+                        <Overview category={category} />
                     </Box>
                     <Box
                         w='50%'
