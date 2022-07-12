@@ -89,7 +89,7 @@ export default function Home() {
           {airQuality ? 
           <>
               <Results airQuality={airQuality} />
-              <Feedback category={airQuality.category} colour={handleBackgroundColour} />
+              <Feedback category={airQuality.category} />
               </>
             : <></>}
         </Flex>

@@ -8,7 +8,9 @@ function Overview({ category }) {
     return (
         <>
             <Box
-                p='.5em'
+                display='flex'
+                flexDirection='column'
+                p='1em'
             >
                 <Subheader text={"Overview"} />
                 <Flex

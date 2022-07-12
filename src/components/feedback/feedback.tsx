@@ -2,8 +2,7 @@ import React from 'react';
 import { Box, Text, Flex } from '@chakra-ui/react';
 import Overview from '../cards/overview/overview';
 
-function Feedback({ category, colour}) {
-    console.log("hello", category)
+function Feedback({ category}) {
     return (
         <>
             <Flex
@@ -19,8 +18,7 @@ function Feedback({ category, colour}) {
                         w='50%'
                         h={{ base: '6.5em', md: '10em' }}
                         borderRadius='12px'
-                        bg={colour}
-                        opacity='.7'
+                        bg={'rgba(255, 255, 255, 0.3)'}
                     >
                         <Overview category={category} />
                     </Box>
@@ -28,7 +26,7 @@ function Feedback({ category, colour}) {
                         w='50%'
                         h={{ base: '6.5em', md: '10em' }}
                         borderRadius='12px'
-                        bg='#F9F9F9'
+                        bg={'rgba(255, 255, 255, 0.3)'}
                     ></Box>
                 </Flex>
                 <Flex
@@ -37,29 +35,29 @@ function Feedback({ category, colour}) {
                     justifyContent={'space-between'}
                 >
                     <Box
-
+                        mr='1em'
                         w={{ base: '6.5em', md: '20em' }}
                         h={{ base: '6.5em', md: '10em' }}
                         borderRadius='12px'
-                        bg='#F9F9F9'
+                        bg={'rgba(255, 255, 255, 0.3)'}
                     ></Box>
                     <Box
-
+                        mr='1em'
                         w={{ base: '6.5em', md: '20em' }}
                         h={{ base: '6.5em', md: '10em' }}
                         borderRadius='12px'
-                        bg='#F9F9F9'
+                        bg={'rgba(255, 255, 255, 0.3)'}
                     ></Box>
                     <Box
                         w={{ base: '6.5em', md: '20em' }}
                         h={{ base: '6.5em', md: '10em' }}
                         borderRadius='12px'
-                        bg='#F9F9F9'
+                        bg={'rgba(255, 255, 255, 0.3)'}
                     ></Box>
                 </Flex>                <Box
                     h={{ lg: '7em' }}
                     borderRadius='12px'
-                    bg='#F9F9F9'
+                    bg={'rgba(255, 255, 255, 0.3)'}
                 ></Box>
             </Flex>
         </>
