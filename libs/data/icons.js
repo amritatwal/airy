@@ -15,6 +15,10 @@ const icons = [
     category: "unhealthy",
     src: "https://svgur.com/s/iw9",
   },
+  {
+    category: "unhealthy for sensitive groups",
+    src: "https://svgur.com/s/iw9",
+  },
 ];
 
 export default icons;

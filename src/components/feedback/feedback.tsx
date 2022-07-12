@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Text, Flex } from '@chakra-ui/react';
 import Overview from '../cards/overview/overview';
 
-function Feedback({ category }) {
+function Feedback({ category, colour}) {
     console.log("hello", category)
     return (
         <>
@@ -19,7 +19,8 @@ function Feedback({ category }) {
                         w='50%'
                         h={{ base: '6.5em', md: '10em' }}
                         borderRadius='12px'
-                        bg='#F9F9F9'
+                        bg={colour}
+                        opacity='.7'
                     >
                         <Overview category={category} />
                     </Box>
@@ -28,7 +29,7 @@ function Feedback({ category }) {
                         h={{ base: '6.5em', md: '10em' }}
                         borderRadius='12px'
                         bg='#F9F9F9'
-                    >one</Box>
+                    ></Box>
                 </Flex>
                 <Flex
                     py='1em'
@@ -41,25 +42,25 @@ function Feedback({ category }) {
                         h={{ base: '6.5em', md: '10em' }}
                         borderRadius='12px'
                         bg='#F9F9F9'
-                    >hello</Box>
+                    ></Box>
                     <Box
 
                         w={{ base: '6.5em', md: '20em' }}
                         h={{ base: '6.5em', md: '10em' }}
                         borderRadius='12px'
                         bg='#F9F9F9'
-                    >two</Box>
+                    ></Box>
                     <Box
                         w={{ base: '6.5em', md: '20em' }}
                         h={{ base: '6.5em', md: '10em' }}
                         borderRadius='12px'
                         bg='#F9F9F9'
-                    >three</Box>
+                    ></Box>
                 </Flex>                <Box
                     h={{ lg: '7em' }}
                     borderRadius='12px'
                     bg='#F9F9F9'
-                >four</Box>
+                ></Box>
             </Flex>
         </>
     )
